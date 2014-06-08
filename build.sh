@@ -6,7 +6,7 @@ pushd lua
 	cc -c *.c
 popd
 pushd luax
-	VARNAME=scheduler_lua ../f2chc.pl scheduler.lua > scheduler.lua.h
+	#VARNAME=scheduler_lua ../f2chc.pl scheduler.lua > scheduler.lua.h
 	cc -c *.c
 popd
 pushd lua_io
