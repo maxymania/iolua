@@ -141,6 +141,8 @@ static void evio_FD_mt(lua_State* L){
 		lua_setfield(L,top,"__index");
 		lua_pushcfunction(L,evio_FD_gc);
 		lua_setfield(L,top,"__gc");
+		lua_newtable(L);
+		lua_setfield(L,top,"__metatable");
 		lua_settop(L,top);
 	}
 }

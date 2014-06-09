@@ -130,6 +130,8 @@ static void evbio_FD(lua_State* L){
 		lua_pushcfunction(L,evbio_FD_close);
 		lua_setfield(L,top+1,"close");
 		lua_setfield(L,top,"__index");
+		lua_newtable(L);
+		lua_setfield(L,top,"__metatable");
 		lua_settop(L,top);
 	}
 }

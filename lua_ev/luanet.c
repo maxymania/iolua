@@ -91,6 +91,8 @@ static void evnet_SRV_mt(lua_State* L){
 		lua_setfield(L,top,"__index");
 		lua_pushcfunction(L,evnet_SRV_gc);
 		lua_setfield(L,top,"__gc");
+		lua_newtable(L);
+		lua_setfield(L,top,"__metatable");
 		lua_settop(L,top);
 	}
 }
