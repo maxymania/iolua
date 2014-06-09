@@ -3,6 +3,7 @@
 #include "lua/lauxlib.h"
 #include "luax/scheduler.h"
 #include "luax/rtlib.h"
+#include "luax/sync.h"
 #include "lua_io/luaiolib.h"
 #include "lua_io/luanetlib.h"
 #include "lua_io/lua_file.h"
@@ -21,6 +22,7 @@ int main(int argc,const char** argv){
 	lua_settop(L,0);
 	luatp_init(L,10);
 	luartlib_install(L);
+	lsync_install(L);
 	liolib_install(L);
 	netlib_install(L);
 	liofile_install(L);
